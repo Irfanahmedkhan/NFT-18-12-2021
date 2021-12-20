@@ -1,0 +1,19 @@
+.mainSection {
+    background-image: url("./assets/bg.png");
+    background-color: transparent;
+    background-repeat:no-repeat;
+    background-size:contain;
+    border: 5px solid red;
+    width: auto;
+    color: white;
+}
+
+.boxImage{
+    position: relative;
+    padding: 0 10%;
+}
+
+.boxImage img {
+    height: auto;
+    width: 100%;
+}

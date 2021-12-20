@@ -1,0 +1,7 @@
+.game_container {
+    height: auto;
+    border: 2px solid blue;
+}
+.game_image1 img{
+    width: 100%;
+}
