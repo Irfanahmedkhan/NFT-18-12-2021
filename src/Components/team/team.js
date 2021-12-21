@@ -70,7 +70,7 @@ export default function TeamPage() {
             
           >
             <Box sx={{
-              width: { sm: '60%', md: '25%' },
+              width: {xs: '45%', sm: '45%', md: '25%' },
               display: 'flex', justifyContent: { xs: 'center', md: 'space-between' }, alignItems: 'center'
             }}
             >
@@ -136,11 +136,11 @@ export default function TeamPage() {
               scrollbar={{ draggable: false }}
               onSwiper={(swiper) => console.log(swiper)}
               onSlideChange={() => console.log('slide change')}
-
+              className='teamsCard'
             >
-              <SwiperSlide >
+              <SwiperSlide  >
                 <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
-                  <img src={character} alt="character" style={{ width: '250px', backgroundColor: 'wheat', padding: '5%' }} />
+                  <img src={character} alt="character"  />
                   <Box style={{ width: '250px' }}>
                     <Typography variant="h4">
                       JACK
@@ -154,7 +154,7 @@ export default function TeamPage() {
               </SwiperSlide>
               <SwiperSlide>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
-                  <img src={character} alt="character" style={{ width: '250px', backgroundColor: 'wheat', padding: '3%' }} />
+                <img src={character} alt="character"  />
                   <Box style={{ width: '250px' }}>
                     <Typography variant="h4" gutterBottom wrap component="div">
                       TONY
@@ -167,7 +167,7 @@ export default function TeamPage() {
                 </Box>
               </SwiperSlide><SwiperSlide>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
-                  <img src={character} alt="character" style={{ width: '250px', backgroundColor: 'wheat', padding: '3%' }} />
+                <img src={character} alt="character"  />
                   <Box style={{ width: '250px' }}>
                     <Typography variant="h4" gutterBottom wrap component="div">
                       RILEY
@@ -180,7 +180,7 @@ export default function TeamPage() {
                 </Box>
               </SwiperSlide><SwiperSlide>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
-                  <img src={character} alt="character" style={{ width: '250px', backgroundColor: 'wheat', padding: '3%' }} />
+                <img src={character} alt="character"  />
                   <Box style={{ width: '250px' }}>
                     <Typography variant="h4" gutterBottom wrap component="div">
                       MAX
@@ -193,7 +193,7 @@ export default function TeamPage() {
                 </Box>
               </SwiperSlide><SwiperSlide>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
-                  <img src={character} alt="character" style={{ width: '250px', backgroundColor: 'wheat', padding: '3%' }} />
+                <img src={character} alt="character"  />
                   <Box style={{ width: '250px' }}>
                     <Typography variant="h4" gutterBottom wrap component="div">
                       TOM
@@ -206,7 +206,7 @@ export default function TeamPage() {
                 </Box>
               </SwiperSlide><SwiperSlide>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
-                  <img src={character} alt="character" style={{ width: '250px', backgroundColor: 'wheat', padding: '3%' }} />
+                <img src={character} alt="character"  />
                   <Box style={{ width: '250px' }}>
                     <Typography variant="h4" gutterBottom wrap component="div">
                       STIFNY

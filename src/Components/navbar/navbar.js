@@ -11,7 +11,6 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { Link, Element} from 'react-scroll';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-import CssBaseline from '@mui/material/CssBaseline';
 import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Zoom from '@mui/material/Zoom';
@@ -143,7 +142,6 @@ const Navbar = (props) => {
 
   return (
     < >
-      <CssBaseline />
       <div id="back-to-top-anchor" ></div>
       <Slide appear={false} direction="down" in={!trigger} >
         <AppBar sx={{ flexGrow: 1, background: { xs: 'transparent', md: '#C6DFD3'}, boxShadow: 'none' }} >

@@ -6,7 +6,7 @@ export default function ErrorPage() {
   return (
 
     <div>
-Page can not found    
+Page not found    
     </div>
   )
 
