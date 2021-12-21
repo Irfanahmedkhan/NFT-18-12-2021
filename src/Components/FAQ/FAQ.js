@@ -95,7 +95,7 @@ export default function FAQPage() {
         >
           <Typography sx={{
             fontSize: {
-              md: 85,
+              md: 65,
               sm: 45,
               xs: 30
             }
@@ -166,8 +166,7 @@ export default function FAQPage() {
                   sit amet blandit leo lobortis eget.
                 </Typography>
               </AccordionDetails>
-            </Accordion>
-            <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+            </Accordion><Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
               <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
                 <Typography
                   sx={{
@@ -194,6 +193,7 @@ export default function FAQPage() {
                 </Typography>
               </AccordionDetails>
             </Accordion>
+            
                 
           </div>
         </Box>

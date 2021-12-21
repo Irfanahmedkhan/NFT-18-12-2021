@@ -1,10 +1,3 @@
-body {
-    background-color: #4C575B;
-    padding: 0%;
-    margin: 0%;
-    color: white;
-}
-
 .roadMapContainer {
     background-image: url("./assets/bg.png");
     background-color: transparent;
@@ -18,7 +11,7 @@ body {
 .roadMap{
     
     position: relative;
-    top: 25vw;
+    top: 15vw;
 }
 .road {
     position: relative;

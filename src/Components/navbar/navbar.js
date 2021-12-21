@@ -129,8 +129,10 @@ function ScrollTop(props) {
 }
 
 const Navbar = (props) => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+
   const trigger = useScrollTrigger();
+
+const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -140,50 +142,60 @@ const Navbar = (props) => {
     setAnchorElNav(null);
   };
 
+
   return (
     < >
       <div id="back-to-top-anchor" ></div>
       <Slide appear={false} direction="down" in={!trigger} >
-        <AppBar sx={{ flexGrow: 1, background: { xs: 'transparent', md: '#C6DFD3'}, boxShadow: 'none' }} >
+        <AppBar sx={{ background: { xs: 'transparent', md: '#C6DFD3'}, boxShadow: 'none' }} >
           <Container maxWidth="xl">
             <Toolbar disableGutters>
               {/* Mobile view */}
               <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-                <IconButton
-                  size="large"
-                  aria-label="account of current user"
-                  aria-controls="menu-appbar"
-                  aria-haspopup="true"
-                  onClick={handleOpenNavMenu}
-                  color="inherit"
-                >
-                  <MenuIcon />
-                </IconButton>
-                <Menu
-                  id="menu-appbar"
-                  anchorEl={anchorElNav}
-                  anchorOrigin={{
-                    vertical: 'bottom',
-                    horizontal: 'left',
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'left',
-                  }}
-                  open={Boolean(anchorElNav)}
-                  onClose={handleCloseNavMenu}
-                  sx={{
-                    display: { xs: 'block', md: 'none' },
-                  }}
-                >
-                  {pages.map((page, i) => (
-                    <MenuItem key={i} onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">{page}</Typography>
-                    </MenuItem>
-                  ))}
-                </Menu>
-              </Box>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+                
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+                
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: 'block', md: 'none' },
+                
+              }}
+            >
+              {pages.map((page, i) => (
+                <MenuItem key={i} onClick={handleCloseNavMenu}
+                sx={{
+                  alignItems: 'center',
+                  
+                  
+                }}>
+                {page}
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
 
               {/* Desktop view */}
               <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>

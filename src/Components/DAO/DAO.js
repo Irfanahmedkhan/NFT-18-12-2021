@@ -41,7 +41,7 @@ export default function DAOPage() {
             <Typography sx={{
               fontSize: {
                 md: 55,
-                sm: 30,
+                sm: 40,
                 xs: 30
               }
             }} gutterBottom variant='h3'>

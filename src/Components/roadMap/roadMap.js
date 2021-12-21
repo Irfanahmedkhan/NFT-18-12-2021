@@ -41,7 +41,7 @@ export default function RoadMapPage() {
         >
           <Typography sx={{
             fontSize: {
-              md: 85,
+              md: 65,
               sm: 45,
               xs: 30
             }
@@ -50,25 +50,25 @@ export default function RoadMapPage() {
           </Typography>
 
           <Box sx={{
-          width: '70%',
-          display: 'flex', flexDirection: 'row', justifyContent: { xs: 'center', md: 'space-between' }, alignItems: 'center'
-        }}
-          style={{  }}
-          className='road'
-        >
-          <Box sx={{width: '25%',}}>
-            <img src={Early2022} alt="Early2022" style={{ width: '100%' }} />
-            <img src={Late2022} alt="Late2022" style={{ width: '100%' }} />
+            width: '70%',
+            display: 'flex', flexDirection: 'row', justifyContent: { xs: 'center', md: 'space-between' }, alignItems: 'center'
+          }}
+            style={{}}
+            className='road'
+          >
+            <Box sx={{ width: '25%', }}>
+              <img src={Early2022} alt="Early2022" style={{ width: '100%' }} />
+              <img src={Late2022} alt="Late2022" style={{ width: '100%' }} />
+            </Box>
+            <Box sx={{ width: '50%', }}>
+              <img src={path} alt="path" style={{ width: '100%' }} />
+            </Box>
+            <Box sx={{ width: '25%', }}>
+              <img src={Jan} alt="Jan" style={{ width: '100%' }} />
+              <img src={Mid2022} alt="Mid2022" style={{ width: '100%' }} />
+            </Box>
+            {/* <img src={quantum_logo} alt="quantum_logo" style={{ width: '100%' }} /> */}
           </Box>
-          <Box sx={{width: '50%',}}>
-            <img src={path} alt="path" style={{ width: '100%' }} />
-          </Box>
-          <Box sx={{width: '25%',}}>
-            <img src={Jan} alt="Jan" style={{ width: '100%' }} />
-            <img src={Mid2022} alt="Mid2022" style={{ width: '100%' }} />
-          </Box>
-          {/* <img src={quantum_logo} alt="quantum_logo" style={{ width: '100%' }} /> */}
-        </Box>
         </Box>
 
 

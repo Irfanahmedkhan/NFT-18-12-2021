@@ -88,7 +88,7 @@ export default function TeamPage() {
                   p: 2, m: 0,
                   fontSize: {
                     md: 55,
-                    sm: 30,
+                    sm: 40,
                     xs: 30
                   }
                 }} gutterBottom variant="h3">
