@@ -54,8 +54,9 @@ export default function GamePage() {
           <Box className='game_image1'
             sx={{
               display: 'flex', flexDirection: { xs: 'column', sm: 'row', md: 'row' },
-              flexWrap: 'wrap', width: '80%', justifyContent: 'space-between', alignItems: { xs: 'center', md: 'flex-start' },
-            }}>
+              flexWrap: "wrap", width: '80%', justifyContent: 'space-between', alignItems: { xs: 'center', md: 'flex-start' },
+            }}
+            >
             <Box sx={{ width: { xs: '90%', sm: '50%' }, paddingBottom: { xs: '5%', sm: '0%' } }}>
               <img src={points} alt="points" />
             </Box>

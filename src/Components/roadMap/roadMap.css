@@ -1,23 +1,19 @@
-.mainSection {
+.roadMapContainer {
     background-image: url("./assets/bg.png");
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: contain;
+    
     height: max-content;
+
 }
 
-.boxImage {
-    padding: 0 10%;
+.roadMap{
+    
     position: relative;
-    top: 15vw;
+    top: 25vw;
 }
-
-.boxImage img {
-    height: auto;
-    width: 100%;
-}
-
-.text {
+.road {
     position: relative;
-    bottom: 6vw
+    
 }

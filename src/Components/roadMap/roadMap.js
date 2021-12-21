@@ -1,15 +1,81 @@
 import React from "react"
 
-// import './mainSection.css'
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-export default function RoadMap() {
+
+
+// Import CSS file
+import './roadMap.css'
+
+// Import images from assests
+import Early2022 from './assets/Early2022.png'
+import Late2022 from './assets/Late2022.png'
+import Mid2022 from './assets/Mid2022.png'
+import Jan from './assets/Jan.png'
+import path from './assets/path.png'
+
+export default function RoadMapPage() {
+
+  // Typography stype
+  const theme = createTheme();
+  theme.typography.h3 = {
+    fontFamily: 'Billy-Bold, Arial',
+  };
+  theme.typography.h5 = {
+    fontFamily: 'Billy-Light, Arial',
+  };
+
   return (
+    <ThemeProvider theme={theme}>
 
-    <div style={{height: '100vh'}}>
+      <div className="roadMapContainer">
 
-      RoadMap page
-    
-    </div>
+        <Box
+          sx={{
+            display: 'flex', flexDirection: 'column',
+            justifyContent: 'center', alignItems: 'center',
+          }}
+          className='roadMap'
+        >
+          <Typography sx={{
+            fontSize: {
+              md: 85,
+              sm: 45,
+              xs: 30
+            }
+          }} gutterBottom variant="h3">
+            ROADMAP
+          </Typography>
+
+          <Box sx={{
+          width: '70%',
+          display: 'flex', flexDirection: 'row', justifyContent: { xs: 'center', md: 'space-between' }, alignItems: 'center'
+        }}
+          style={{  }}
+          className='road'
+        >
+          <Box sx={{width: '25%',}}>
+            <img src={Early2022} alt="Early2022" style={{ width: '100%' }} />
+            <img src={Late2022} alt="Late2022" style={{ width: '100%' }} />
+          </Box>
+          <Box sx={{width: '50%',}}>
+            <img src={path} alt="path" style={{ width: '100%' }} />
+          </Box>
+          <Box sx={{width: '25%',}}>
+            <img src={Jan} alt="Jan" style={{ width: '100%' }} />
+            <img src={Mid2022} alt="Mid2022" style={{ width: '100%' }} />
+          </Box>
+          {/* <img src={quantum_logo} alt="quantum_logo" style={{ width: '100%' }} /> */}
+        </Box>
+        </Box>
+
+
+
+      </div>
+    </ThemeProvider>
+
   )
 
 }

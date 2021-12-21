@@ -54,7 +54,7 @@ export default function DAOPage() {
                 sm: 20,
                 xs: 15
               }
-            }} gutterBottom wrap variant='h5'>
+            }} gutterBottom variant='h5'>
               A fun text to speech web app to let you speak through your computer in whatever voice synthesis module that is available to your Browser/Operating System.A fun text to speech web app to let you speak through your computer in
               whatever voice synthesis module that is available to your Browser/Operating System. <br /><br />
 

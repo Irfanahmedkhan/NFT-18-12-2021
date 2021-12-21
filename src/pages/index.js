@@ -1,5 +1,6 @@
 import React from "react"
-import Navbar from "../Components/Navbar/navbar"
+import Navbar from "../Components/navbar/navbar"
+
 import './index.css'
 
 export default function Home() {
@@ -7,7 +8,6 @@ export default function Home() {
 
     <div>
       <Navbar />
-   
     </div>
   )
 
