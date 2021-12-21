@@ -1,25 +1,20 @@
 .DAO_container{
-    border: 5px solid blue;
-    width: auto;
     color: white;
-    height: auto;
-
 }
 .DAO {
-    padding: 0 10%;
-    
+    padding: 0%;
+    margin: 0%;
 }
 
 .DAO img {
     height: auto;
     width: 80%;
-
+    padding: 0 10%;
 }
 
 .DAO_container_image {
     width: 100%;
     height: auto;
-    border: 1px solid yellow;
     position: relative;
-    bottom: -30%;
+    bottom: 9vw;
 }

@@ -9,17 +9,26 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { Link, Element } from 'react-scroll';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import CssBaseline from '@mui/material/CssBaseline';
+import Fab from '@mui/material/Fab';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import Zoom from '@mui/material/Zoom';
+import Slide from "@material-ui/core/Slide";
+
+// import CSS
+import './navbar.css';
+
+//import pages
 import MainSectionPage from '../mainSection/mainSection';
 import DAOPage from '../DAO/DAO.js';
 import GamePage from '../game/game.js';
 import RoadMapPage from '../roadMap/roadMap.js';
 import TeamPage from '../team/team.js';
 import FAQPage from '../FAQ/FAQ.js';
-import useScrollTrigger from '@mui/material/useScrollTrigger';
-import Slide from "@material-ui/core/Slide";
 
-
+//import Images
 import NFT from './assets/NFT.png'
 import DAO from './assets/DAO.png'
 import GAME from './assets/GAME.png'
@@ -37,94 +46,109 @@ const pages = [
     smooth={true}
     duration={500}
     to="mainSectionPage"
-    className="flex items-center justify-evenly"
   >
-    <img src={NFT} alt="NFT" />
+    <img src={NFT} alt="NFT" className="navbarIcon" />
   </Link>,
   <Link
     spy={true}
     smooth={true}
     duration={500}
     to="DAOPage"
-    className="flex items-center justify-evenly"
   >
-    <img src={DAO} alt="DAO" />
+    <img src={DAO} alt="DAO" className="navbarIcon" />
   </Link>,
   <Link
     spy={true}
     smooth={true}
     duration={500}
     to="gamePage"
-    className="flex items-center justify-evenly"
   >
-    <img src={GAME} alt="game" />
-  </Link>,
-  <Link
-    spy={true}
-    smooth={true}
-    duration={500}
-    to="roadMapPage"
-    className="flex items-center justify-evenly"
-  >
-    <img src={ROADMAP} alt="roadmap" />
+    <img src={GAME} alt="game" className="navbarIcon" />
   </Link>,
   <Link
     spy={true}
     smooth={true}
     duration={500}
     to="teamPage"
-    className="flex items-center justify-evenly"
   >
-    <img src={TEAM} alt="team" />
+    <img src={TEAM} alt="team" className="navbarIcon" />
   </Link>,
   <Link
     spy={true}
     smooth={true}
     duration={500}
-    to="FAQPage"
-    className="flex items-center justify-evenly"
+    to="roadMapPage"
   >
-    <img src={FAQ} alt="FAQ" />
+    <img src={ROADMAP} alt="roadmap" className="navbarIcon" />
+  </Link>,
+
+  <Link
+    spy={true}
+    smooth={true}
+    duration={500}
+    to="FAQPage"
+  >
+    <img src={FAQ} alt="FAQ" className="navbarIcon" />
   </Link>,
 
 ];
-const settings = [<img src={vi} alt="vi" />, <img src={twitter} alt="twitter" />, <img src={text} alt="text" />];
+const sideIcons = [<img src={vi} alt="vi" className="navbarIcon" />, <img src={twitter} alt="twitter" className="navbarIcon" />, <img src={text} alt="text" className="navbarIcon" />];
 
-const Navbar = () => {
+function ScrollTop(props) {
+  const { children, window } = props;
+  const trigger = useScrollTrigger({
+    target: window ? window() : undefined,
+    disableHysteresis: true,
+    threshold: 100,
+  });
+
+  const handleClick = (event) => {
+    const anchor = (event.target.ownerDocument || document).querySelector(
+      '#back-to-top-anchor',
+    );
+
+    if (anchor) {
+      anchor.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    }
+  };
+
+  return (
+    <Zoom in={trigger}>
+      <Box
+        onClick={handleClick}
+        role="presentation"
+        sx={{ position: 'fixed', bottom: 25, right: 25 }}
+      >
+        {children}
+      </Box>
+    </Zoom>
+  );
+}
+
+const Navbar = (props) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
   const trigger = useScrollTrigger();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
     < >
-      <Slide appear={false} direction="down" in={!trigger} style={{border: '1px solid blue' }}>
-        <AppBar style={{ background: 'transparent', boxShadow: 'none' }}>
+      <CssBaseline />
+      <div id="back-to-top-anchor" ></div>
+      <Slide appear={false} direction="down" in={!trigger} >
+        <AppBar sx={{ flexGrow: 1, background: { xs: 'transparent', md: '#C6DFD3'}, boxShadow: 'none' }} >
           <Container maxWidth="xl">
             <Toolbar disableGutters>
-              {/* Desktop view */}
-              <Typography
-                variant="h6"
-                noWrap
-                component="div"
-                sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
-              >
-                LOGO Desktop
-              </Typography>
+              {/* Mobile view */}
               <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                 <IconButton
                   size="large"
@@ -154,76 +178,68 @@ const Navbar = () => {
                     display: { xs: 'block', md: 'none' },
                   }}
                 >
-                  {pages.map((page) => (
-                    <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  {pages.map((page, i) => (
+                    <MenuItem key={i} onClick={handleCloseNavMenu}>
                       <Typography textAlign="center">{page}</Typography>
                     </MenuItem>
                   ))}
                 </Menu>
               </Box>
 
-              {/* Mobile view */}
-
-              <Typography
-                variant="h6"
-                noWrap
-                component="div"
-                sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-              >
-                LOGO
-              </Typography>
-
+              {/* Desktop view */}
               <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                {pages.map((page) => (
+                {pages.map((pageMobile, i) => (
                   <Button
-                    key={page}
+                    key={i}
                     onClick={handleCloseNavMenu}
                     size="small"
                     sx={{ my: 2, color: 'white', display: 'block' }}
                   >
-                    {page}
+                    {pageMobile}
 
                   </Button>
                 ))}
               </Box>
 
               <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }} style={{ flexWrap: "nowrap" }}>
-                {settings.map((setting) => (
-
-                  <Button size="small" key={setting} onClick={handleCloseNavMenu} >
-                    <Typography textAlign="center">{setting}</Typography>
+                {sideIcons.map((icon, i) => (
+                  <Button size="small" key={i} onClick={handleCloseNavMenu} >
+                    {icon}
                   </Button>
                 ))}
-
               </Box>
+
             </Toolbar>
           </Container>
-
-
-
-
         </AppBar>
       </Slide>
+
+      {/* sub pages */}
       <Element name="mainSectionPage" className="element">
         <MainSectionPage />
       </Element>
-
       <Element name="DAOPage" className="element">
         <DAOPage />
       </Element>
-
       <Element name="gamePage" className="element">
         <GamePage />
-      </Element>
-      <Element name="roadMapPage" className="element">
-        <RoadMapPage />
       </Element>
       <Element name="teamPage" className="element">
         <TeamPage />
       </Element>
+      <Element name="roadMapPage" className="element">
+        <RoadMapPage />
+      </Element>
       <Element name="FAQPage" className="element">
         <FAQPage />
       </Element>
+
+      {/* scroll to Top */}
+      <ScrollTop {...props}>
+        <Fab color="white" size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop>
     </>
   );
 };

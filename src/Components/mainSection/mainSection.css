@@ -1,19 +1,23 @@
 .mainSection {
     background-image: url("./assets/bg.png");
     background-color: transparent;
-    background-repeat:no-repeat;
-    background-size:contain;
-    border: 5px solid red;
-    width: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
     color: white;
+    height: max-content;
 }
 
-.boxImage{
-    position: relative;
+.boxImage {
     padding: 0 10%;
+    position: relative;
+    top: 15vw;
 }
-
 .boxImage img {
     height: auto;
     width: 100%;
+}
+
+.text {
+    position: relative;
+    bottom: 6vw
 }
