@@ -4,23 +4,22 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Image from "../images_asset/Images_asset";
 
 // import CSS file
 import './game.css'
 
 // // import picturs from assets folder
-// import points from './assets/points.png'
-// import choseDoor from './assets/choseDoor.png'
-// import weapons from './assets/weapons.png'
-// import whiteQ from './assets/whiteQ.png'
-// import yellowQ from './assets/yellowQ.png'
-// import greenQ from './assets/greenQ.png'
-// import attack from './assets/attack.png'
+import game_points from '../../assets/game_points.png'
+import game_choseDoor from '../../assets/game_choseDoor.png'
+import game_weapons from '../../assets/game_weapons.png'
+import game_whiteQ from '../../assets/game_whiteQ.png'
+import game_yellowQ from '../../assets/game_yellowQ.png'
+import game_greenQ from '../../assets/game_greenQ.png'
+import game_attack from '../../assets/game_attack.png'
 
 export default function GamePage() {
-  const images = [<Image src='game_whiteQ.png' alt="white question mark" className='img'/>, <Image src='game_whiteQ.png' alt="white question mark" className='img'/>, <Image src='game_whiteQ.png' alt="white question mark" className='img'/>, <Image src='game_yellowQ.png' alt="yellow question mark" className='img'/>, <Image src='game_attack.png' alt="attack mark" className='img'/>, <Image src='game_greenQ.png' alt="green question mark" className='img'/>,];
 
+  const images = [<img src={game_whiteQ} alt="white question box" />, <img src={game_whiteQ} alt="white question box" />, <img src={game_whiteQ} alt="whiteQ" />, <img src={game_yellowQ} alt="yellow question box" />, <img src={game_attack} alt="attack box" />, <img src={game_greenQ} alt="green question box" />,];
   // Typography stype
   const theme = createTheme();
   theme.typography.h4 = {
@@ -31,6 +30,7 @@ export default function GamePage() {
     <ThemeProvider theme={theme}>
 
       <div className="game_container">
+
         <Box
           sx={{
             display: 'flex',
@@ -52,22 +52,23 @@ export default function GamePage() {
             GAME
           </Typography>
 
-          <Box sx={{
-            display: 'flex', flexDirection: { xs: 'column', sm: 'row', md: 'row' },
-            flexWrap: "wrap", width: '80%', justifyContent: 'space-between', alignItems: { xs: 'center', md: 'flex-start' },
-          }}
+          <Box className='game_image1'
+            sx={{
+              display: 'flex', flexDirection: { xs: 'column', sm: 'row', md: 'row' },
+              flexWrap: "wrap", width: '80%', justifyContent: 'space-between', alignItems: { xs: 'center', md: 'flex-start' },
+            }}
           >
             <Box sx={{ width: { xs: '90%', sm: '50%' }, paddingBottom: { xs: '5%', sm: '0%' } }}>
-              <Image
-                src="game_points.png"
+              <img
+                src={game_points}
                 alt="game points"
               />
             </Box>
 
             <Box sx={{ width: { xs: '90%', sm: '40%' }, paddingBottom: { xs: '5%', sm: '0%' } }}>
               <div style={{ height: "60%" }}>
-                <Image
-                  src="game_choseDoor.png"
+                <img
+                  src={game_choseDoor}
                   alt="chose the door"
                 />
 
@@ -81,8 +82,8 @@ export default function GamePage() {
               </div>
             </Box>
 
-            <Image src='game_weapons.png' alt="game page weapons"
-              style={{ width: '100%', margin: '5vw 0', marginBottom: '10vw'}}
+            <img src={game_weapons} alt="game page weapons"
+              style={{ width: '100%', margin: '5vw 0', marginBottom: '10vw' }}
             />
 
           </Box>

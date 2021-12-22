@@ -8,7 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import { Link} from 'react-scroll';
+import { Link } from 'react-scroll';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 import Slide from "@material-ui/core/Slide";
@@ -18,15 +18,15 @@ import './navbar.css';
 
 
 //import Images
-import NFT from './assets/NFT.png'
-import DAO from './assets/DAO.png'
-import GAME from './assets/GAME.png'
-import ROADMAP from './assets/ROADMAP.png'
-import TEAM from './assets/TEAM.png'
-import FAQ from './assets/FAQ.png'
-import twitter from './assets/twitter.png'
-import vi from './assets/vi.png'
-import text from './assets/text.png'
+import NFT from '../../assets/NFT.png'
+import DAO from '../../assets/DAO.png'
+import GAME from '../../assets/GAME.png'
+import ROADMAP from '../../assets/ROADMAP.png'
+import TEAM from '../../assets/TEAM.png'
+import FAQ from '../../assets/FAQ.png'
+import twitter from '../../assets/twitter.png'
+import discord from '../../assets/discord.png'
+import text from '../../assets/text.png'
 
 const pages = [
   <Link
@@ -81,7 +81,7 @@ const pages = [
   </Link>,
 
 ];
-const sideIcons = [<img src={vi} alt="vi" className="navbarIcon" />, <img src={twitter} alt="twitter" className="navbarIcon" />, <img src={text} alt="text" className="navbarIcon" />];
+
 
 const Navbar = (props) => {
 
@@ -168,18 +168,22 @@ const Navbar = (props) => {
               </Box>
 
               <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }} style={{ flexWrap: "nowrap" }}>
-                {sideIcons.map((icon, i) => (
-                  <Button size="small" key={i} onClick={handleCloseNavMenu} >
-                    {icon}
-                  </Button>
-                ))}
+                <Button size="small" target="_blank" href="http://www.google.com/">
+                  <img src={discord} alt="vi" className="navbarIcon" />
+                </Button>
+                <Button size="small"target="_blank" href="http://www.google.com/">
+                  <img src={twitter} alt="twitter" className="navbarIcon" />
+                </Button>
+                <Button size="small"target="_blank" href="http://www.google.com/">
+                  <img src={text} alt="text" className="navbarIcon" />
+                </Button>
               </Box>
 
             </Toolbar>
           </Container>
         </AppBar>
-      </Slide>     
-     
+      </Slide>
+
 
     </>
   );

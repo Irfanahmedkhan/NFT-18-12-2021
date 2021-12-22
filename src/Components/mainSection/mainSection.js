@@ -2,10 +2,11 @@ import React from "react"
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Image from "../images_asset/Images_asset";
-
 // import css file
 import './mainSection.css'
+import mainSection_items from '../../assets/mainSection_items.png'
+import mainSection_fan from '../../assets/mainSection_fan.png'
+import mainSection_logo from '../../assets/mainSection_logo.png'
 
 export default function MainSectionPage() {
 
@@ -20,6 +21,7 @@ export default function MainSectionPage() {
 
   return (
     <ThemeProvider theme={theme}>
+
       <div className="mainSection">
 
         <Box
@@ -32,15 +34,15 @@ export default function MainSectionPage() {
           className="boxImage"
         >
 
-          <Image
-            src="mainSection_logo.png"
+          <img
+            src={mainSection_logo}
             alt="page title"
             style={{
               width: "100%"
             }}
           />
-          <Image
-            src="mainSection_fan.png"
+          <img
+            src={mainSection_fan}
             alt="page logo"
             style={{
               width: "100%"
@@ -81,8 +83,8 @@ export default function MainSectionPage() {
               whatever voice synthesis module that is available to your Browser/Operating System.
             </Typography>
           </Box>
-          <Image
-            src="mainSection_items.png"
+          <img
+            src={mainSection_items}
             alt="page logo"
             style={{
               marginBottom: '15vw', width: '80vw', height: 'auto'

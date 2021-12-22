@@ -102,7 +102,7 @@ export default function TeamPage() {
                     sm: 20,
                     xs: 15
                   }
-                }} gutterBottom wrap variant="h5">
+                }} gutterBottom variant="h5">
                   A fun text to speech web app to let you speak through your computer in
                   whatever voice synthesis module that is available to your Browser/Operating System.<br /><br />
 
@@ -126,13 +126,12 @@ export default function TeamPage() {
               justifyContent: 'center',
               alignItems: { xs: 'center', md: 'center' },
             }}
-
           >
 
             <Swiper
               // install Swiper modules
               modules={[Navigation, Pagination, A11y]}
-              spaceBetween={0}
+              spaceBetween={10}
               slidesPerView='auto'
               navigation
               pagination={{ clickable: true }}
@@ -141,7 +140,7 @@ export default function TeamPage() {
               className='teamsCard'
 
             >
-              <SwiperSlide  >
+              <SwiperSlide>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
                   <img src={character} alt="character" />
                   <Box style={{ width: '250px' }}>
@@ -156,65 +155,65 @@ export default function TeamPage() {
                 </Box>
               </SwiperSlide>
               <SwiperSlide>
-                <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
+              <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
                   <img src={character} alt="character" />
                   <Box style={{ width: '250px' }}>
-                    <Typography variant="h4" gutterBottom wrap component="div">
+                    <Typography variant="h4" gutterBottom>
                       TONY
                     </Typography>
-                    <Typography variant="h6" gutterBottom wrap component="div">
+                    <Typography variant="h6" gutterBottom>
                       A fun text to speech web app to let you speak through your computer in
                       whatever voice synthesis module that is available to your Browser/Operating System.
                     </Typography>
                   </Box>
                 </Box>
               </SwiperSlide><SwiperSlide>
-                <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
+              <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
                   <img src={character} alt="character" />
                   <Box style={{ width: '250px' }}>
-                    <Typography variant="h4" gutterBottom wrap component="div">
+                    <Typography variant="h4" gutterBottom>
                       RILEY
                     </Typography>
-                    <Typography variant="h6" gutterBottom wrap component="div">
+                    <Typography variant="h6" gutterBottom>
                       A fun text to speech web app to let you speak through your computer in
                       whatever voice synthesis module that is available to your Browser/Operating System.
                     </Typography>
                   </Box>
                 </Box>
               </SwiperSlide><SwiperSlide>
-                <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
+              <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
                   <img src={character} alt="character" />
                   <Box style={{ width: '250px' }}>
-                    <Typography variant="h4" gutterBottom wrap component="div">
+                    <Typography variant="h4" gutterBottom>
                       MAX
                     </Typography>
-                    <Typography variant="h6" gutterBottom wrap component="div">
+                    <Typography variant="h6" gutterBottom>
                       A fun text to speech web app to let you speak through your computer in
                       whatever voice synthesis module that is available to your Browser/Operating System.
                     </Typography>
                   </Box>
                 </Box>
               </SwiperSlide><SwiperSlide>
-                <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
+              <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
                   <img src={character} alt="character" />
                   <Box style={{ width: '250px' }}>
-                    <Typography variant="h4" gutterBottom wrap component="div">
+                    <Typography variant="h4" gutterBottom>
                       TOM
                     </Typography>
-                    <Typography variant="h6" gutterBottom wrap component="div">
+                    <Typography variant="h6" gutterBottom>
                       A fun text to speech web app to let you speak through your computer in
                       whatever voice synthesis module that is available to your Browser/Operating System.
                     </Typography>
                   </Box>
                 </Box>
               </SwiperSlide><SwiperSlide>
-                <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
+              <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
                   <img src={character} alt="character" />
                   <Box style={{ width: '250px' }}>
-                    <Typography variant="h4" gutterBottom wrap component="div">
+                    <Typography variant="h4" gutterBottom>
                       STIFNY
                     </Typography>
-                    <Typography variant="h6" gutterBottom wrap component="div">
+                    <Typography variant="h6" gutterBottom >
                       A fun text to speech web app to let you speak through your computer in
                       whatever voice synthesis module that is available to your Browser/Operating System.
                     </Typography>

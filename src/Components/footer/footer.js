@@ -11,12 +11,10 @@ import Button from '@mui/material/Button';
 import './footer.css'
 
 // Import images from assests
-import twitter from './twitter.png'
-import vi from './vi.png'
-import text from './text.png'
-
-import bg from './bg.png'
-// import path from './assets/path.png'
+import twitter from '../../assets/twitter.png'
+import discord from '../../assets/discord.png'
+import text from '../../assets/text.png'
+import footer_bg from '../../assets/footer_bg.png'
 
 export default function FooterPage() {
 
@@ -29,23 +27,26 @@ export default function FooterPage() {
         fontFamily: 'Billy-Light, Arial',
     };
 
-    const sideIcons = [<img src={vi} alt="vi" />, <img src={twitter} alt="twitter" />, <img src={text} alt="text" />];
+
 
     return (
         <ThemeProvider theme={theme}>
             <div className="footerContainer">
-
                 <Box
                     sx={{
                         display: 'flex', flexDirection: 'column',
                         justifyContent: 'center', alignItems: 'center',
                     }}>
-                    <Box sx={{}} style={{}} className='footerIcon'>
-                        {sideIcons.map((icon, i) => (
-                            <Button size="small" key={i}>
-                                {icon}
-                            </Button>
-                        ))}
+                    <Box className='footerIcon'>
+                        <Button size="small" target="_blank" href="http://www.google.com/">
+                            <img src={discord} alt="vi" className="navbarIcon" />
+                        </Button>
+                        <Button size="small" target="_blank" href="http://www.google.com/">
+                            <img src={twitter} alt="twitter" className="navbarIcon" />
+                        </Button>
+                        <Button size="small" target="_blank" href="http://www.google.com/">
+                            <img src={text} alt="text" className="navbarIcon" />
+                        </Button>
                     </Box>
 
                     <Typography sx={{
@@ -55,8 +56,9 @@ export default function FooterPage() {
                             xs: 15
                         }
                     }} gutterBottom variant='h3' className='footerText'>
-                        team@solquestnft.com            </Typography>
-                    <img src={bg} alt="backgrond" style={{ width: '100%' }} />
+                        team@solquestnft.com            
+                    </Typography>
+                    <img src={footer_bg} alt="backgrond" style={{ width: '100vw', height:'auto' }} />
                 </Box>
             </div>
         </ThemeProvider>

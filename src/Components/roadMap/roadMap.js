@@ -10,11 +10,11 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import './roadMap.css'
 
 // Import images from assests
-import Early2022 from './assets/Early2022.png'
-import Late2022 from './assets/Late2022.png'
-import Mid2022 from './assets/Mid2022.png'
-import Jan from './assets/Jan.png'
-import path from './assets/path.png'
+import roadMap_Early2022 from '../../assets/roadMap_Early2022.png'
+import roadMap_Late2022 from '../../assets/roadMap_Late2022.png'
+import roadMap_Mid2022 from '../../assets/roadMap_Mid2022.png'
+import roadMap_Jan from '../../assets/roadMap_Jan.png'
+import roadMap_path from '../../assets/roadMap_path.png'
 
 export default function RoadMapPage() {
 
@@ -61,20 +61,19 @@ export default function RoadMapPage() {
               display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
               alignItems: 'flex-start',
             }}>
-              <img src={Early2022} alt="Early2022" style={{ width: '100%', position:'relative', left: "5vw"}} />
-              <img src={Late2022} alt="Late2022" style={{ width: '100%' }} />
+              <img src={roadMap_Early2022} alt="Early2022" style={{ width: '100%', position:'relative', left: "5vw"}} />
+              <img src={roadMap_Late2022} alt="Late2022" style={{ width: '100%' }} />
             </Box>
             <Box sx={{ width: '50%', }}>
-              <img src={path} alt="path" style={{ width: '100%' }} />
+              <img src={roadMap_path} alt="path" style={{ width: '100%' }} />
             </Box>
             <Box sx={{
               width: '25%', height: '30vw',
               display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'flex-start'
             }}>
-              <img src={Jan} alt="Jan" style={{ width: '100%', position:'relative', right: "7vw"}} />
-              <img src={Mid2022} alt="Mid2022" style={{ width: '100%' }} />
+              <img src={roadMap_Jan} alt="Jan" style={{ width: '100%', position:'relative', right: "7vw"}} />
+              <img src={roadMap_Mid2022} alt="Mid2022" style={{ width: '100%' }} />
             </Box>
-            {/* <img src={quantum_logo} alt="quantum_logo" style={{ width: '100%' }} /> */}
           </Box>
         </Box>
 

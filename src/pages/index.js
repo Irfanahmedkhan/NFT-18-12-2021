@@ -6,6 +6,7 @@ import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Zoom from '@mui/material/Zoom';
 import Box from '@mui/material/Box';
+import { Helmet } from 'react-helmet'
 
 
 //import pages
@@ -20,7 +21,6 @@ import Footer from '../Components/footer/footer'
 import './index.css'
 
 export default function Home(props) {
-
 
   function ScrollTop(props) {
     const { children, window } = props;
@@ -59,6 +59,11 @@ export default function Home(props) {
   return (
 
     <div>
+      <Helmet>
+        <title>SOL QuestNFT</title>
+        <meta name='description' content='NFT games' />
+        <meta name='keywords' content='NFT, play to earn, games, earn money' />
+      </Helmet>
       <Navbar />
       <Element name="mainSectionPage" className="element">
         <MainSectionPage />

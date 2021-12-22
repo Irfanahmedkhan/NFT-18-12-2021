@@ -1,11 +1,8 @@
 body {
     position: relative;
     margin: 0;
-    
 }
 
-.teamContainer {
-}
 .teamsCard img{
     width: 250px;
     height: auto;

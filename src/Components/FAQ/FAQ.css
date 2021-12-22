@@ -4,8 +4,15 @@
     top: 10vw;
 }
 
+.quizDiv{
+    width: 80%
+}
+
 @media only screen and (max-width: 600px) {
     .FAQContainer {
         height: 40vh;
+    }
+    .quizDiv{
+        width: 90%
     }
 }
