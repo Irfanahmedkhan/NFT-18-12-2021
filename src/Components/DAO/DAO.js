@@ -3,13 +3,10 @@ import React from "react"
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Image from "../images_asset/Images_asset";
 
 // import CSS file
 import './DAO.css'
-
-// import pictures from assets folder
-import book from './assets/book.png'
-import DAO_bg from './assets/DAO_bg.png'
 
 export default function DAOPage() {
 
@@ -27,7 +24,7 @@ export default function DAOPage() {
 
       <div className="DAO_container">
 
-        <Box className="DAO" sx={{ my: 2, color: 'white', display: 'flex', flexDirection: 'column', alignItems: "center" }}>
+        <Box className="DAO" sx={{ m: 2, color: 'white', display: 'flex', flexDirection: 'column', alignItems: "center",justifyContent:'center' }}>
           <Box
             sx={{
               width: '80%',
@@ -62,10 +59,23 @@ export default function DAOPage() {
             </Typography>
 
           </Box>
-          <img src={book} alt="book" />
+          <Image
+            src="DAO_book.png"
+            alt="book at token page"
+            style={{
+              width: "70%",
+              height: 'auto',
+              position: 'relative',
+              top: '10vw',
+              zIndex: '-50',
+            }}
+          />
+
+
+          {/* <img src={book} alt="book" /> */}
 
         </Box>
-        <img src={DAO_bg} alt="DAO background" className="DAO_container_image" />
+        <Image src='DAO_bg.png' alt="DAO background" className="DAO_container_image" />
 
       </div>
     </ThemeProvider>

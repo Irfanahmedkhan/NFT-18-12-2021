@@ -2,12 +2,7 @@ import React from "react"
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-
-// import images from assets
-import fan from './assets/fan.png'
-import items from './assets/items.png'
-import logo from './assets/logo.png'
+import Image from "../images_asset/Images_asset";
 
 // import css file
 import './mainSection.css'
@@ -36,8 +31,22 @@ export default function MainSectionPage() {
           }}
           className="boxImage"
         >
-          <img src={logo} alt="logo" />
-          <img src={fan} alt="fan" />
+
+          <Image
+            src="mainSection_logo.png"
+            alt="page title"
+            style={{
+              width: "100%"
+            }}
+          />
+          <Image
+            src="mainSection_fan.png"
+            alt="page logo"
+            style={{
+              width: "100%"
+            }}
+          />
+
 
           <Box
             sx={{
@@ -72,8 +81,13 @@ export default function MainSectionPage() {
               whatever voice synthesis module that is available to your Browser/Operating System.
             </Typography>
           </Box>
+          <Image
+            src="mainSection_items.png"
+            alt="page logo"
+            style={{
+              marginBottom: '15vw', width: '80vw', height: 'auto'
+            }} />
 
-          <img src={items} alt="items" style={{ marginBottom: '15vw' }} />
         </Box>
       </div>
     </ThemeProvider>

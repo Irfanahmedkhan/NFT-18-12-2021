@@ -1,6 +1,9 @@
 
 .navbarIcon {
-    width: 70%;
-    margin: 0;
+    width: auto;
+    height: 40px;
+    object-fit: cover;
+    margin: 0 10px;
+    
 }
 

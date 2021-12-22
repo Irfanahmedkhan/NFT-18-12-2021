@@ -3,30 +3,19 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import { Link, Element} from 'react-scroll';
+import { Link} from 'react-scroll';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-import Fab from '@mui/material/Fab';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import Zoom from '@mui/material/Zoom';
+
 import Slide from "@material-ui/core/Slide";
 
-import Footer from '../footer/footer'
 // import CSS
 import './navbar.css';
 
-//import pages
-import MainSectionPage from '../mainSection/mainSection';
-import DAOPage from '../DAO/DAO.js';
-import GamePage from '../game/game.js';
-import RoadMapPage from '../roadMap/roadMap.js';
-import TeamPage from '../team/team.js';
-import FAQPage from '../FAQ/FAQ.js';
 
 //import Images
 import NFT from './assets/NFT.png'
@@ -94,45 +83,11 @@ const pages = [
 ];
 const sideIcons = [<img src={vi} alt="vi" className="navbarIcon" />, <img src={twitter} alt="twitter" className="navbarIcon" />, <img src={text} alt="text" className="navbarIcon" />];
 
-function ScrollTop(props) {
-  const { children, window } = props;
-  const trigger = useScrollTrigger({
-    target: window ? window() : undefined,
-    disableHysteresis: true,
-    threshold: 100,
-  });
-
-  const handleClick = (event) => {
-    const anchor = (event.target.ownerDocument || document).querySelector(
-      '#back-to-top-anchor',
-    );
-
-    if (anchor) {
-      anchor.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center',
-      });
-    }
-  };
-
-  return (
-    <Zoom in={trigger}>
-      <Box
-        onClick={handleClick}
-        role="presentation"
-        sx={{ position: 'fixed', bottom: 25, right: 25 }}
-      >
-        {children}
-      </Box>
-    </Zoom>
-  );
-}
-
 const Navbar = (props) => {
 
   const trigger = useScrollTrigger();
 
-const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -144,58 +99,58 @@ const [anchorElNav, setAnchorElNav] = React.useState(null);
 
 
   return (
-    < >
+    <>
       <div id="back-to-top-anchor" ></div>
       <Slide appear={false} direction="down" in={!trigger} >
-        <AppBar sx={{ background: { xs: 'transparent', md: '#C6DFD3'}, boxShadow: 'none' }} >
+        <AppBar sx={{ background: { xs: 'transparent', md: '#C6DFD3' }, boxShadow: 'none' }} >
           <Container maxWidth="xl">
             <Toolbar disableGutters>
               {/* Mobile view */}
               <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-                
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-                
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-                
-              }}
-            >
-              {pages.map((page, i) => (
-                <MenuItem key={i} onClick={handleCloseNavMenu}
-                sx={{
-                  alignItems: 'center',
-                  
-                  
-                }}>
-                {page}
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+                <IconButton
+                  size="large"
+                  aria-label="account of current user"
+                  aria-controls="menu-appbar"
+                  aria-haspopup="true"
+                  onClick={handleOpenNavMenu}
+                  color="inherit"
+                >
+                  <MenuIcon />
+                </IconButton>
+                <Menu
+                  id="menu-appbar"
+
+                  anchorEl={anchorElNav}
+                  anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'left',
+
+                  }}
+                  keepMounted
+                  transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'left',
+
+                  }}
+                  open={Boolean(anchorElNav)}
+                  onClose={handleCloseNavMenu}
+                  sx={{
+                    display: { xs: 'block', md: 'none' },
+
+                  }}
+                >
+                  {pages.map((page, i) => (
+                    <MenuItem key={i} onClick={handleCloseNavMenu}
+                      sx={{
+                        alignItems: 'center',
+
+
+                      }}>
+                      {page}
+                    </MenuItem>
+                  ))}
+                </Menu>
+              </Box>
 
               {/* Desktop view */}
               <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -223,34 +178,9 @@ const [anchorElNav, setAnchorElNav] = React.useState(null);
             </Toolbar>
           </Container>
         </AppBar>
-      </Slide>
+      </Slide>     
+     
 
-      {/* sub pages */}
-      <Element name="mainSectionPage" className="element">
-        <MainSectionPage />
-      </Element>
-      <Element name="DAOPage" className="element">
-        <DAOPage />
-      </Element>
-      <Element name="gamePage" className="element">
-        <GamePage />
-      </Element>
-      <Element name="teamPage" className="element">
-        <TeamPage />
-      </Element>
-      <Element name="roadMapPage" className="element">
-        <RoadMapPage />
-      </Element>
-      <Element name="FAQPage" className="element">
-        <FAQPage />
-      </Element>
-<Footer />
-      {/* scroll to Top */}
-      <ScrollTop {...props}>
-        <Fab color="white" size="small" aria-label="scroll back to top">
-          <KeyboardArrowUpIcon />
-        </Fab>
-      </ScrollTop>
     </>
   );
 };

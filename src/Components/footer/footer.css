@@ -5,23 +5,23 @@
     top: 25vw;
 }
 
-.footerIcon{
+.footerIcon {
     position: relative;
     top: 35vw;
 }
 
-.footerText{
+.footerText {
     position: relative;
     top: 40vw;
-    color: #4C575B;
+    color: #4c575b;
     font-weight: 800;
-
 }
 
-
-
-.footerIcon img{
-    width: 8vw;
+.footerIcon img {
+    width: 7vw;
     margin: 1vw;
+    height: auto;
+}
+.footerText {
     letter-spacing: 2px;
 }

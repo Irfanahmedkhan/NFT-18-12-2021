@@ -1,9 +1,10 @@
 .mainSection {
-    background-image: url("./assets/bg.png");
+    background-image: url("../../assets/mainsection_bg.png");
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: contain;
     height: max-content;
+    
 }
 
 .boxImage {
@@ -12,10 +13,6 @@
     top: 15vw;
 }
 
-.boxImage img {
-    height: auto;
-    width: 100%;
-}
 
 .text {
     position: relative;

@@ -4,14 +4,12 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, A11y } from 'swiper';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-
 
 // Import CSS file
 import './team.css'
@@ -36,6 +34,7 @@ export default function TeamPage() {
   };
   theme.typography.h6 = {
     fontFamily: 'Billy-Light, Arial',
+    marginBottom: '50px',
     fontWeight: 600,
     '@media (min-width:600px)': {
       fontSize: '1rem',
@@ -65,15 +64,15 @@ export default function TeamPage() {
             sx={{
               width: '80%',
               display: 'flex', flexDirection: { xs: 'column', md: 'row' },
-              flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'space-between' }, alignItems: 'center'
+              flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'space-between' },
+              alignItems: { xs: 'center', md: 'flex-start' }
             }}
-            
+
           >
             <Box sx={{
-              width: {xs: '45%', sm: '45%', md: '25%' },
-              display: 'flex', justifyContent: { xs: 'center', md: 'space-between' }, alignItems: 'center'
-            }}
-            >
+              width: { xs: '45%', sm: '35%', md: '25%' },
+              padding: '1%'
+            }}>
               <img src={quantum_logo} alt="quantum_logo" style={{ width: '100%' }} />
             </Box>
             <Box sx={{ width: { sm: '100%', md: '65%' } }} >
@@ -83,9 +82,10 @@ export default function TeamPage() {
                   justifyContent: 'flex-start',
                   flexDirection: 'column',
                   alignItems: { xs: 'center', sm: 'center', md: 'flex-start' },
-                }}>
+                }}
+        
+                >
                 <Typography sx={{
-                  p: 2, m: 0,
                   fontSize: {
                     md: 55,
                     sm: 40,
@@ -96,6 +96,7 @@ export default function TeamPage() {
                 </Typography>
 
                 <Typography sx={{
+                  padding: '0',
                   fontSize: {
                     md: 25,
                     sm: 20,
@@ -124,23 +125,25 @@ export default function TeamPage() {
               width: '90%',
               justifyContent: 'center',
               alignItems: { xs: 'center', md: 'center' },
-            }}>
+            }}
+
+          >
 
             <Swiper
               // install Swiper modules
-              modules={[Navigation, Pagination, Scrollbar, A11y]}
+              modules={[Navigation, Pagination, A11y]}
               spaceBetween={0}
               slidesPerView='auto'
               navigation
               pagination={{ clickable: true }}
-              scrollbar={{ draggable: false }}
-              onSwiper={(swiper) => console.log(swiper)}
-              onSlideChange={() => console.log('slide change')}
+              // onSwiper={(swiper) => console.log(swiper)}
+              // onSlideChange={() => console.log('slide change')}
               className='teamsCard'
+
             >
               <SwiperSlide  >
                 <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
-                  <img src={character} alt="character"  />
+                  <img src={character} alt="character" />
                   <Box style={{ width: '250px' }}>
                     <Typography variant="h4">
                       JACK
@@ -154,7 +157,7 @@ export default function TeamPage() {
               </SwiperSlide>
               <SwiperSlide>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
-                <img src={character} alt="character"  />
+                  <img src={character} alt="character" />
                   <Box style={{ width: '250px' }}>
                     <Typography variant="h4" gutterBottom wrap component="div">
                       TONY
@@ -167,7 +170,7 @@ export default function TeamPage() {
                 </Box>
               </SwiperSlide><SwiperSlide>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
-                <img src={character} alt="character"  />
+                  <img src={character} alt="character" />
                   <Box style={{ width: '250px' }}>
                     <Typography variant="h4" gutterBottom wrap component="div">
                       RILEY
@@ -180,7 +183,7 @@ export default function TeamPage() {
                 </Box>
               </SwiperSlide><SwiperSlide>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
-                <img src={character} alt="character"  />
+                  <img src={character} alt="character" />
                   <Box style={{ width: '250px' }}>
                     <Typography variant="h4" gutterBottom wrap component="div">
                       MAX
@@ -193,7 +196,7 @@ export default function TeamPage() {
                 </Box>
               </SwiperSlide><SwiperSlide>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
-                <img src={character} alt="character"  />
+                  <img src={character} alt="character" />
                   <Box style={{ width: '250px' }}>
                     <Typography variant="h4" gutterBottom wrap component="div">
                       TOM
@@ -206,7 +209,7 @@ export default function TeamPage() {
                 </Box>
               </SwiperSlide><SwiperSlide>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexDirection: 'column', alignItems: 'center', p: "0 5%" }}>
-                <img src={character} alt="character"  />
+                  <img src={character} alt="character" />
                   <Box style={{ width: '250px' }}>
                     <Typography variant="h4" gutterBottom wrap component="div">
                       STIFNY

@@ -57,9 +57,6 @@ export default function FooterPage() {
                     }} gutterBottom variant='h3' className='footerText'>
                         team@solquestnft.com            </Typography>
                     <img src={bg} alt="backgrond" style={{ width: '100%' }} />
-
-
-
                 </Box>
             </div>
         </ThemeProvider>

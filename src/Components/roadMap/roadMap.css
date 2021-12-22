@@ -2,17 +2,14 @@
     background-image: url("./assets/bg.png");
     background-color: transparent;
     background-repeat: no-repeat;
-    background-size: contain;
-    
+    background-size: contain;    
     height: max-content;
-
 }
 
-.roadMap{
-    
+/* .roadMap{
     position: relative;
-    top: 15vw;
-}
+    top: 0vw; */
+/* } */
 .road {
     position: relative;
     
