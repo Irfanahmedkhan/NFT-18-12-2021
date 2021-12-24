@@ -13,7 +13,6 @@ import './roadMap.css'
 import roadMap_Early2022 from '../../assets/roadMap_Early2022.png'
 import roadMap_Late2022 from '../../assets/roadMap_Late2022.png'
 import roadMap_Mid2022 from '../../assets/roadMap_Mid2022.png'
-import roadMap_Jan from '../../assets/roadMap_Jan.png'
 import roadMap_path from '../../assets/roadMap_path.png'
 
 export default function RoadMapPage() {
@@ -24,6 +23,8 @@ export default function RoadMapPage() {
     fontFamily: 'Billy-Bold, Arial',
   };
   theme.typography.h5 = {
+    fontFamily: 'Billy-Light, Arial',
+  }; theme.typography.h6 = {
     fontFamily: 'Billy-Light, Arial',
   };
 
@@ -45,40 +46,189 @@ export default function RoadMapPage() {
               sm: 45,
               xs: 30
             }
-          }} gutterBottom variant="h3">
+          }} style={{ marginBottom: '10vw' }} gutterBottom variant="h3">
             ROADMAP
           </Typography>
 
+
+          {/* only show on small screen view  */}
+          <Box
+            sx={{
+              width: '80%',
+              display: { xs: 'flex', sm: 'none' }, flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              flexGrow: 1, 
+            }}
+            style={{ position: 'relative', marginBottom: '10vw', }}
+          >
+            <Box sx={{
+              width: '45%',
+              display: 'flex', flexDirection: 'column',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+
+            }}
+            >
+              <Box>
+                <img src={roadMap_Early2022} alt="Early2022"
+                  style={{ position: 'relative', top: '2vw', width: '70%', }} />
+                <Typography variant='h6' sx={{
+                  fontSize: 10
+
+                }}
+                  style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
+                >
+                  Token funding, Token listing, Game development, Castles A collaborative approach to land acquisition.
+                </Typography>
+              </Box><Box>
+                <img src={roadMap_Late2022} alt="Early2022"
+                  style={{ position: 'relative', top: '2vw', width: '70%', }} />
+                <Typography variant='h6' sx={{
+                  fontSize: 10
+
+                }}
+                  style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
+                >
+                  Token funding, Token listing, Game development, Castles A collaborative approach to land acquisition.
+                </Typography>
+              </Box>
+            </Box>
+
+            <Box sx={{
+              width: '45%',
+              display: 'flex', flexDirection: 'column',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+
+            }}
+            >
+              <Box >
+                <img src={roadMap_Early2022} alt="Early2022"
+                  style={{ position: 'relative', top: '2vw', width: '70%', }} />
+                <Typography variant='h6' sx={{
+                  fontSize: 10
+
+                }}
+                  style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
+                >
+                  Token funding, Token listing, Game development, Castles A collaborative approach to land acquisition.
+                </Typography>
+              </Box>
+              <Box style={{}}
+              >
+                <img src={roadMap_Mid2022} alt="Early2022"
+                  style={{ position: 'relative', top: '2vw', width: '70%', }} />
+                <Typography variant='h6' sx={{
+                  fontSize: 10
+
+                }}
+                  style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
+                >
+                  Token funding, Token listing, Game development, Castles A collaborative approach to land acquisition.
+                </Typography>
+              </Box>
+            </Box>
+
+
+
+          </Box>
+
+          <Box sx={{ width: { xs: '80%' }, display: { xs: 'flex', sm: 'none' } }}>
+            <img src={roadMap_path} alt="path" style={{ width: '100%', height: '100%' }} />
+          </Box>
+          {/* ======================== */}
+
           <Box sx={{
-            width: '70%',
+            width: '80%',
             display: 'flex', flexDirection: 'row', justifyContent: { xs: 'center', md: 'space-between' }, alignItems: 'center'
           }}
-            style={{ position: 'relative'}}
-            className='road'
           >
             <Box sx={{
               width: '25%', height: '30vw',
-              display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
+              display: 'flex', flexDirection: 'column',
+              justifyContent: 'space-between',
               alignItems: 'flex-start',
             }}>
-              <img src={roadMap_Early2022} alt="Early2022" style={{ width: '100%', position:'relative', left: "5vw"}} />
-              <img src={roadMap_Late2022} alt="Late2022" style={{ width: '100%' }} />
+              <Box style={{ minWidth: '100px', position: 'relative', left: "4vw", bottom: "4vw" }} sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, flexDirection: 'column' }}>
+                <img src={roadMap_Early2022} alt="Early2022"
+                  style={{ width: '100%', }} />
+                <Typography variant='h6' sx={{
+                  fontSize: {
+                    md: 15,
+                    sm: 10,
+                  },
+
+                }}
+                  style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
+                >
+                  Token funding, Token listing, Game development, Castles A collaborative approach to land acquisition.
+                </Typography>
+              </Box>
+              <Box style={{ minWidth: '100px' }} sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, flexDirection: 'column' }}>
+                <img src={roadMap_Late2022} alt="Early2022"
+                  style={{ width: '100%', }} />
+                <Typography variant='h6' sx={{
+                  fontSize: {
+                    md: 15,
+                    sm: 10,
+                  },
+
+                }}
+                  style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
+                >
+                  Token funding, Token listing, Game development, Castles A collaborative approach to land acquisition.
+                </Typography>
+              </Box>
             </Box>
-            <Box sx={{ width: '50%', }}>
-              <img src={roadMap_path} alt="path" style={{ width: '100%' }} />
+
+            <Box sx={{ width: { xs: '100%' }, display: { xs: 'none', sm: 'flex' } }}>
+              <img src={roadMap_path} alt="path" style={{ width: '100%', height: '100%' }} />
             </Box>
             <Box sx={{
               width: '25%', height: '30vw',
               display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'flex-start'
             }}>
-              <img src={roadMap_Jan} alt="Jan" style={{ width: '100%', position:'relative', right: "7vw"}} />
-              <img src={roadMap_Mid2022} alt="Mid2022" style={{ width: '100%' }} />
+              <Box style={{ minWidth: '100px', position: 'relative', right: "4vw", bottom: "4vw" }} sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, flexDirection: 'column' }}>
+                <img src={roadMap_Early2022} alt="Early2022"
+                  style={{ width: '100%', }} />
+                <Typography variant='h6' sx={{
+                  fontSize: {
+                    md: 15,
+                    sm: 10,
+                  },
+
+                }}
+                  style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
+                >
+                  Token funding, Token listing, Game development, Castles A collaborative approach to land acquisition.
+                </Typography>
+              </Box>
+              <Box style={{ minWidth: '100px' }} sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, flexDirection: 'column' }}>
+                <img src={roadMap_Mid2022} alt="Early2022"
+                  style={{ width: '100%', }} />
+                <Typography variant='h6' sx={{
+                  fontSize: {
+                    md: 15,
+                    sm: 10,
+                  },
+
+                }}
+                  style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
+                >
+                  Token funding, Token listing, Game development, Castles A collaborative approach to land acquisition.
+                </Typography>
+              </Box>
             </Box>
           </Box>
+
+
+
+
+
+
+
         </Box>
-
-
-
       </div>
     </ThemeProvider>
 

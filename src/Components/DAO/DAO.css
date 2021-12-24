@@ -4,6 +4,27 @@
 }
 
 .DAO_container_image {
-    width: 100vw;
+    width: 100%;
+    object-fit: cover;
     height: auto;
+    position: relative;
+    bottom: 12vw;
+}
+.bookImgDiv {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 80%;
+    top: "12vw";
+}
+
+.bookText {
+    position: absolute;
+    top: 1vw;
+    left: 5vw;
+    text-align: left;
+    overflow: hidden;
+    max-height: 90%;
+
+    /* transform: translate(-50%, -50%); */
 }

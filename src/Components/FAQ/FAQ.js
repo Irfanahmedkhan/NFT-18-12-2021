@@ -99,7 +99,7 @@ export default function FAQPage() {
               sm: 45,
               xs: 30
             }
-          }} gutterBottom variant="h3">
+          }} gutterBottom variant="h3" style={{ margin:'10vw 0vw'}}>
             F.A.Q
           </Typography>
 

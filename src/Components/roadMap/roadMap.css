@@ -3,9 +3,6 @@
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: contain;    
+    width: 100%;
     height: max-content;
-}
-
-.road {
-    position: relative;
 }
