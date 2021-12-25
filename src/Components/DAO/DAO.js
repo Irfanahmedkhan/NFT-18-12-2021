@@ -32,7 +32,7 @@ export default function DAOPage() {
 
       <div className="DAO_container">
 
-        <Box className="DAO" sx={{ color: 'white', display: 'flex', flexDirection: 'column', alignItems: "center", justifyContent: 'center' }}>
+        <Box sx={{ color: 'white', display: 'flex', flexDirection: 'column', alignItems: "center", justifyContent: 'center' }}>
           <Box
             sx={{
               width: '80%',
@@ -41,16 +41,15 @@ export default function DAOPage() {
               flexDirection: 'column',
               alignItems: 'center',
             }}
-            style={{ margin: '5% 0' }}
           >
             <Typography sx={{
               fontSize: {
-                md: 55,
+                md: 65,
                 sm: 40,
                 xs: 30
               },
 
-            }}style={{ margin:'10vw 0vw'}} gutterBottom variant='h3'>
+            }}style={{ margin:'5vw 0vw'}} gutterBottom variant='h3'>
               TOKEN
             </Typography>
 
@@ -74,6 +73,7 @@ export default function DAOPage() {
                 style={{
                   width: "100%",
                   height: 'auto',
+                  
                 }} />
             </Box>
             <Box sx={{ flexGrow: 1, display: {xs: 'flex', sm: 'none'} }}>
@@ -100,12 +100,14 @@ export default function DAOPage() {
             <Typography className="bookText" sx={{
               width:{xs: '80%', sm:'40%'},
               fontSize: {
-                sm: 15,
-                xs: 13
+                sm: '1.5vw',
+                
+                xs: '3vw'
               },color: '#3c3025',
               position: 'absolute',
               top: '2vw',
               left: {xs:'10vw',sm: '5vw'},
+              overflowY:'hidden'
           
             }} gutterBottom variant='h6'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porttitor mollis tellus a tincidunt. Ut pretium metus at nisi molestie, a sodales erat sollicitudin. Sed ut metus lacus. Mauris et eros velit.<br/><br/> 
@@ -114,9 +116,13 @@ export default function DAOPage() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porttitor mollis tellus a tincidunt. Ut pretium metus at nisi molestie, a sodales erat sollicitudin. Sed ut metus lacus. Mauris et eros velit. Curabitur sit amet ante est. Class aptent taciti sociosqu ad litora torquent In non sem quis arcu porta vehicula vel sed lorem.<br />
             </Typography>
           </div>
+          <img src={DAO_bg} alt="DAO background" className="DAO_bg_image" />
 
         </Box>
-        <img src={DAO_bg} alt="DAO background" className="DAO_container_image" />
+
+
+        
+
 
       </div>
     </ThemeProvider>

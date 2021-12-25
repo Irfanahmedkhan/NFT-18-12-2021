@@ -1,15 +1,20 @@
 .DAO_container {
     color: white;
-    height: max-content;
+    height: 100%;
+    border: 3px solid blue;
 }
 
-.DAO_container_image {
-    width: 100%;
-    object-fit: cover;
-    height: auto;
-    position: relative;
+.DAO_bg_image {
     bottom: 12vw;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    margin-bottom: -10vw;
+    display: block;
 }
+
 .bookImgDiv {
     position: relative;
     text-align: center;

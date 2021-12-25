@@ -102,9 +102,12 @@ const Navbar = (props) => {
     <>
       <div id="back-to-top-anchor" ></div>
       <Slide appear={false} direction="down" in={!trigger} >
-        <AppBar sx={{ background: { xs: 'transparent', md: '#C6DFD3' }, boxShadow: 'none' }} >
+        <AppBar sx={{ background: { xs: 'transparent', md: '#C6DFD3' }, boxShadow: 'none' }}
+        
+        >
           <Container maxWidth="xl">
-            <Toolbar disableGutters>
+            <Toolbar disableGutters
+            >
               {/* Mobile view */}
               <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                 <IconButton
@@ -141,11 +144,7 @@ const Navbar = (props) => {
                 >
                   {pages.map((page, i) => (
                     <MenuItem key={i} onClick={handleCloseNavMenu}
-                      sx={{
-                        alignItems: 'center',
-
-
-                      }}>
+                      style={{border: '1px solid yellow', marginLeft: '20px'}}>
                       {page}
                     </MenuItem>
                   ))}
@@ -153,29 +152,31 @@ const Navbar = (props) => {
               </Box>
 
               {/* Desktop view */}
-              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                {pages.map((pageMobile, i) => (
+              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
+              >
+                {pages.map((page, i) => (
                   <Button
                     key={i}
                     onClick={handleCloseNavMenu}
                     size="small"
-                    sx={{ my: 2, color: 'white', display: 'block' }}
+                    sx={{display: 'block' }}
+                    style={{marginRight: '1vw', padding: 0,display: 'flex', alignItems: 'center'}}
                   >
-                    {pageMobile}
-
+                    {page}
                   </Button>
                 ))}
               </Box>
 
-              <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }} style={{ flexWrap: "nowrap" }}>
-                <Button size="small" target="_blank" href="http://www.google.com/">
-                  <img src={discord} alt="vi" className="navbarIcon" />
+              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center', alignItems: 'center' }} 
+              style={{ flexWrap: "nowrap"}}>
+                <Button target="_blank" href="http://www.google.com/">
+                  <img src={discord} alt="discord icon" className="navbarLinkIcon" />
                 </Button>
-                <Button size="small"target="_blank" href="http://www.google.com/">
-                  <img src={twitter} alt="twitter" className="navbarIcon" />
+                <Button target="_blank" href="http://www.google.com/">
+                  <img src={twitter} alt="twitter icon" className="navbarLinkIcon" />
                 </Button>
-                <Button size="small"target="_blank" href="http://www.google.com/">
-                  <img src={text} alt="text" className="navbarIcon" />
+                <Button target="_blank" href="http://www.google.com/">
+                  <img src={text} alt="text icon" className="navbarLinkIcon" />
                 </Button>
               </Box>
 

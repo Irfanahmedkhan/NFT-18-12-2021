@@ -1,20 +1,32 @@
+
+
 .mainSection {
     background-image: url("../../assets/mainsection_bg.png");
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: contain;
-    height: max-content;
     
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: max-content;
+    border: 1px solid hotpink;
 
+}
+.title_images {
+    position: relative;
+    top: 20vw;
+    width: 80%;
+    height: 80vw;
+    border: 1px solid red;
+}
 .boxImage {
-    padding: 0 10%;
-    position: relative;
-    top: 15vw;
+    /* padding: 0 10%; */
+    /* position: relative; */
 }
 
-
-.text {
+ .text {
     position: relative;
-    bottom: 6vw
+    bottom: 5vw 
 }

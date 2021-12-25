@@ -91,7 +91,7 @@ export default function TeamPage() {
                     sm: 40,
                     xs: 30
                   }
-                }}style={{ marginBottom:'10vw'}} gutterBottom variant="h3">
+                }}style={{ marginBottom:'5vw'}} gutterBottom variant="h3">
                   TEAM
                 </Typography>
 

@@ -7,6 +7,7 @@ import './mainSection.css'
 import mainSection_items from '../../assets/mainSection_items.png'
 import mainSection_fan from '../../assets/mainSection_fan.png'
 import mainSection_logo from '../../assets/mainSection_logo.png'
+import mainsection_bg from '../../assets/mainsection_bg.png'
 
 export default function MainSectionPage() {
 
@@ -21,19 +22,11 @@ export default function MainSectionPage() {
 
   return (
     <ThemeProvider theme={theme}>
-
       <div className="mainSection">
 
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-          className="boxImage"
-        >
 
+
+        <div className="title_images">
           <img
             src={mainSection_logo}
             alt="page title"
@@ -48,10 +41,8 @@ export default function MainSectionPage() {
               width: "100%"
             }}
           />
-
-
-          <Box
-            sx={{
+          <div
+            style={{
               display: 'flex',
               justifyContent: 'center',
               flexDirection: 'column',
@@ -61,8 +52,9 @@ export default function MainSectionPage() {
           >
             <Typography sx={{
               fontSize: {
-                md: 45,
-                sm: 30,
+                md: 65,
+                sm: 40,
+                xs: 30
 
               }
             }} gutterBottom variant='h3'>
@@ -82,15 +74,20 @@ export default function MainSectionPage() {
               A fun text to speech web app to let you speak through your computer in
               whatever voice synthesis module that is available to your Browser/Operating System.
             </Typography>
-          </Box>
-          <img
+            <img
             src={mainSection_items}
             alt="page logo"
             style={{
-              marginBottom: '15vw', width: '80vw', height: 'auto'
+              width: '80vw', height: 'auto'
             }} />
+          </div>
+       
+        </div>
 
-        </Box>
+
+
+
+
       </div>
     </ThemeProvider>
 
