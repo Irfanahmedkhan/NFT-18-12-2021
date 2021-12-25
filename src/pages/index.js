@@ -66,7 +66,7 @@ export default function Home(props) {
       </Helmet>
       <Navbar />
       <Element name="mainSectionPage" className="element">
-        {/* <MainSectionPage /> */}
+        <MainSectionPage />
       </Element>
       <Element name="DAOPage" className="element">
         <DAOPage />

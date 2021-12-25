@@ -78,7 +78,7 @@ export default function MainSectionPage() {
             src={mainSection_items}
             alt="page logo"
             style={{
-              width: '80vw', height: 'auto'
+              width: '80vw', height: 'auto', margin: "5vw 0"
             }} />
           </div>
        
