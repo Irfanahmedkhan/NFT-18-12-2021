@@ -38,15 +38,14 @@ export default function RoadMapPage() {
             display: 'flex', flexDirection: 'column',
             justifyContent: 'center', alignItems: 'center',
           }}
-          className='roadMap'
         >
           <Typography sx={{
             fontSize: {
-              md: 65,
-              sm: 45,
+              md: 100,
+              sm: 50,
               xs: 30
             }
-          }} style={{ marginBottom: '10vw' }} gutterBottom variant="h3">
+          }} style={{ margin: '25vw 0 0 0' }} gutterBottom variant="h3">
             ROADMAP
           </Typography>
 
@@ -58,9 +57,9 @@ export default function RoadMapPage() {
               display: { xs: 'flex', sm: 'none' }, flexDirection: 'row',
               justifyContent: 'space-between',
               alignItems: 'center',
-              flexGrow: 1, 
+              flexGrow: 1, marginTop: '5vw',
             }}
-            style={{ position: 'relative', marginBottom: '10vw', }}
+            style={{ marginBottom: '10vw', }}
           >
             <Box sx={{
               width: '45%',
@@ -129,34 +128,35 @@ export default function RoadMapPage() {
                 </Typography>
               </Box>
             </Box>
-
-
-
           </Box>
-
           <Box sx={{ width: { xs: '80%' }, display: { xs: 'flex', sm: 'none' } }}>
             <img src={roadMap_path} alt="path" style={{ width: '100%', height: '100%' }} />
           </Box>
           {/* ======================== */}
 
+
+          {/* show on big screen */}
           <Box sx={{
-            width: '80%',
-            display: 'flex', flexDirection: 'row', justifyContent: { xs: 'center', md: 'space-between' }, alignItems: 'center'
+          flexGrow: 1, display: { xs: 'none', sm: 'flex' }, 
+          width: '80%', flexDirection: 'row', 
+          justifyContent: { xs: 'center', md: 'center' }, alignItems: 'center'
           }}
+
           >
-            <Box sx={{
-              width: '25%', height: '30vw',
-              display: 'flex', flexDirection: 'column',
-              justifyContent: 'space-between',
-              alignItems: 'flex-start',
-            }}>
-              <Box style={{ minWidth: '100px', position: 'relative', left: "4vw", bottom: "4vw" }} sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, flexDirection: 'column' }}>
+            <Box sx={{ width: '30%', height: '60vw' }}
+              style={{
+                display: 'flex', flexDirection: 'column',
+                justifyContent: 'space-evenly',
+              }}
+            >
+              <Box style={{ minWidth: '100px' }} sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, flexDirection: 'column' }}>
                 <img src={roadMap_Early2022} alt="Early2022"
-                  style={{ width: '100%', }} />
+                  style={{ width: '100%', marginTop: '10vw' }} />
                 <Typography variant='h6' sx={{
                   fontSize: {
-                    md: 15,
-                    sm: 10,
+                    md: 25,
+                    sm: 20,
+                    xs: 15,
                   },
 
                 }}
@@ -170,8 +170,9 @@ export default function RoadMapPage() {
                   style={{ width: '100%', }} />
                 <Typography variant='h6' sx={{
                   fontSize: {
-                    md: 15,
-                    sm: 10,
+                    md: 25,
+                    sm: 20,
+                    xs: 15,
                   },
 
                 }}
@@ -182,20 +183,30 @@ export default function RoadMapPage() {
               </Box>
             </Box>
 
-            <Box sx={{ width: { xs: '100%' }, display: { xs: 'none', sm: 'flex' } }}>
+            <Box sx={{
+              width: '40%', height: '60vw',
+              display: { xs: 'none', sm: 'flex' }, justifyContent: 'center'
+            }}>
               <img src={roadMap_path} alt="path" style={{ width: '100%', height: '100%' }} />
             </Box>
-            <Box sx={{
-              width: '25%', height: '30vw',
-              display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'flex-start'
-            }}>
-              <Box style={{ minWidth: '100px', position: 'relative', right: "4vw", bottom: "4vw" }} sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, flexDirection: 'column' }}>
+
+
+
+            <Box sx={{ width: '30%', height: '60vw' }}
+              style={{
+                display: 'flex', flexDirection: 'column',
+                justifyContent: 'space-evenly', marginTop: '10vw'
+              }}
+
+            >
+              <Box style={{ minWidth: '100px' }} sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, flexDirection: 'column' }}>
                 <img src={roadMap_Early2022} alt="Early2022"
                   style={{ width: '100%', }} />
                 <Typography variant='h6' sx={{
                   fontSize: {
-                    md: 15,
-                    sm: 10,
+                    md: 25,
+                    sm: 20,
+                    xs: 15,
                   },
 
                 }}
@@ -209,8 +220,9 @@ export default function RoadMapPage() {
                   style={{ width: '100%', }} />
                 <Typography variant='h6' sx={{
                   fontSize: {
-                    md: 15,
-                    sm: 10,
+                    md: 25,
+                    sm: 20,
+                    xs: 15,
                   },
 
                 }}
@@ -219,13 +231,26 @@ export default function RoadMapPage() {
                   Token funding, Token listing, Game development, Castles A collaborative approach to land acquisition.
                 </Typography>
               </Box>
+
             </Box>
+
+
+
           </Box>
 
 
-
-
-
+          <Box sx={{width:'80%'}}>
+            <Typography sx={{
+              fontSize: {
+                md: 35,
+                sm: 25,
+                xs: 15
+              }
+            }} gutterBottom variant='h5'>
+              A fun text to speech web app to let you speak through your computer in whatever voice synthesis module that is available to your Browser/Operating System.A fun text to speech web app to let you speak through your computer in
+              whatever voice synthesis module that is available to your Browser/Operating System. <br />
+            </Typography>
+          </Box>
 
 
         </Box>

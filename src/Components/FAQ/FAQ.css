@@ -1,6 +1,5 @@
 .FAQContainer {
-    height: max-content;
-    
+    height: auto;
 }
 
 .quizDiv{
@@ -8,9 +7,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .FAQContainer {
-        height: 40vh;
-    }
+  
     .quizDiv{
         width: 90%
     }

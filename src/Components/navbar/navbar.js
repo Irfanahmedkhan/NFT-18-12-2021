@@ -103,10 +103,11 @@ const Navbar = (props) => {
       <div id="back-to-top-anchor" ></div>
       <Slide appear={false} direction="down" in={!trigger} >
         <AppBar sx={{ background: { xs: 'transparent', md: '#C6DFD3' }, boxShadow: 'none' }}
-        
+        style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}
         >
-          <Container maxWidth="xl">
+          
             <Toolbar disableGutters
+            style={{width: '80%'}}
             >
               {/* Mobile view */}
               <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -167,7 +168,7 @@ const Navbar = (props) => {
                 ))}
               </Box>
 
-              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center', alignItems: 'center' }} 
+              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end', alignItems: 'center' }} 
               style={{ flexWrap: "nowrap"}}>
                 <Button target="_blank" href="http://www.google.com/">
                   <img src={discord} alt="discord icon" className="navbarLinkIcon" />
@@ -181,7 +182,6 @@ const Navbar = (props) => {
               </Box>
 
             </Toolbar>
-          </Container>
         </AppBar>
       </Slide>
 

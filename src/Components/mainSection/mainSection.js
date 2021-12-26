@@ -52,8 +52,8 @@ export default function MainSectionPage() {
           >
             <Typography sx={{
               fontSize: {
-                md: 65,
-                sm: 40,
+                md: 100,
+                sm: 50,
                 xs: 30
 
               }
@@ -63,8 +63,8 @@ export default function MainSectionPage() {
 
             <Typography sx={{
               fontSize: {
-                md: 25,
-                sm: 20,
+                md: 35,
+                sm: 25,
                 xs: 15
               }
             }} gutterBottom variant='h5'>

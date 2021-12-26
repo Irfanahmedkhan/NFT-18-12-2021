@@ -28,7 +28,7 @@ export default function GamePage() {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit']
+]
   // Typography stype
   const theme = createTheme();
   theme.typography.h4 = {
@@ -53,21 +53,21 @@ export default function GamePage() {
         >
 
           <Typography sx={{
-            p: 2,
+            
             fontSize: {
-              md: 65,
-              sm: 40,
+              md: 100,
+              sm: 50,
               xs: 30
             },
 
-          }} style={{ marginBottom: '5vw' }} gutterBottom variant="h4">
+          }} gutterBottom variant="h4">
             GAME
           </Typography>
 
           <Box className='game_image1'
             sx={{
               display: 'flex', flexDirection: { xs: 'column', sm: 'row', md: 'row' },
-              flexWrap: "wrap", width: '80%', justifyContent: {xs:'center',sm:'space-between'}, alignItems: { xs: 'center', md: 'flex-start' },
+              flexWrap: "wrap", width: '80%', justifyContent: {xs:'center',sm:'space-between'}, alignItems: { xs: 'center', sm: 'flex-start' },
             }}
 
           >
@@ -88,7 +88,8 @@ export default function GamePage() {
                     />
                     <Typography variant='h6' sx={{
                       fontSize: {
-                        md: 20,
+                        md: 35,
+                        sm: 25,
                         xs: 15
                       }
                     }} style={{ width: '87%' }}>
@@ -127,7 +128,7 @@ export default function GamePage() {
 
           </Box>
           <img src={game_weapons} alt="game page weapons"
-            style={{ width: '80%', margin: '5vw 0', marginBottom: '10vw' }}
+            style={{ width: '80%', margin: '3vw 0' }}
           />
         </Box>
       </div>

@@ -41,22 +41,24 @@ export default function DAOPage() {
               flexDirection: 'column',
               alignItems: 'center',
             }}
+    
+    style={{marginBottom: '5vw'}}
           >
             <Typography sx={{
               fontSize: {
-                md: 65,
-                sm: 40,
+                md: 100,
+                sm: 50,
                 xs: 30
               },
 
-            }}style={{ margin:'5vw 0vw'}} gutterBottom variant='h3'>
+            }} gutterBottom variant='h3'>
               TOKEN
             </Typography>
 
             <Typography sx={{
               fontSize: {
-                md: 25,
-                sm: 20,
+                md: 35,
+                sm: 25,
                 xs: 15
               }
             }} gutterBottom variant='h5'>
@@ -100,8 +102,7 @@ export default function DAOPage() {
             <Typography className="bookText" sx={{
               width:{xs: '80%', sm:'40%'},
               fontSize: {
-                sm: '1.5vw',
-                
+                sm: '2vw',
                 xs: '3vw'
               },color: '#3c3025',
               position: 'absolute',

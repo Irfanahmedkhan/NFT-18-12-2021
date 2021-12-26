@@ -87,30 +87,27 @@ export default function TeamPage() {
                 >
                 <Typography sx={{
                   fontSize: {
-                    md: 55,
-                    sm: 40,
+                    md: 90,
+                    sm: 50,
                     xs: 30
                   }
-                }}style={{ marginBottom:'5vw'}} gutterBottom variant="h3">
+                }} gutterBottom variant="h3">
                   TEAM
                 </Typography>
 
                 <Typography sx={{
                   padding: '0',
                   fontSize: {
-                    md: 25,
-                    sm: 20,
+                    md: 35,
+                    sm: 25,
                     xs: 15
                   }
                 }} gutterBottom variant="h5">
                   A fun text to speech web app to let you speak through your computer in
-                  whatever voice synthesis module that is available to your Browser/Operating System.<br /><br />
+                  whatever voice synthesis module that is available to your Browser/Operating System.<br />
 
                   A fun text to speech web app to let you speak through your computer in
-                  whatever voice synthesis module that is available to your Browser/Operating System.<br /><br />
-
-                  A fun text to speech web app to let you speak through your computer in
-                  whatever voice synthesis module that is available to your Browser/Operating System.
+                  whatever voice synthesis module that is available to your Browser/Operating System.<br />
                 </Typography>
               </Box>
             </Box>

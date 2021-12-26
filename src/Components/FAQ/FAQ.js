@@ -11,7 +11,6 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 
 
 
-
 // Import CSS file
 import './FAQ.css'
 
@@ -21,9 +20,9 @@ import './FAQ.css'
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
-  
+
   '&:not(:last-child)': {
-    borderBottom: 0,
+    border: 'none',
   },
   '&:before': {
     display: 'none',
@@ -37,6 +36,7 @@ const AccordionSummary = styled((props) => (
   />
 ))(({ theme }) => ({
   backgroundColor: '#4C575B',
+  border: 'none',
   flexDirection: 'row-reverse',
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(90deg)',
@@ -44,13 +44,21 @@ const AccordionSummary = styled((props) => (
   '& .MuiAccordionSummary-content': {
     marginLeft: theme.spacing(1),
   },
+    MuiExpansionPanel: {
+      root: {
+        '&:before': {
+          display: 'none'
+        },
+      },
+    },
+  
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
   paddingLeft: theme.spacing(5),
   backgroundColor: '#4C575B',
-  
+
 }));
 
 
@@ -95,11 +103,11 @@ export default function FAQPage() {
         >
           <Typography sx={{
             fontSize: {
-              md: 65,
-              sm: 45,
+              md: 100,
+              sm: 50,
               xs: 30
             }
-          }} gutterBottom variant="h3" style={{ margin:'5vw 0vw'}}>
+          }} gutterBottom variant="h3" style={{ margin: '5vw 0vw' }}>
             F.A.Q
           </Typography>
 
@@ -113,23 +121,23 @@ export default function FAQPage() {
 
         >
           <div className='quizDiv'>
-          <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')} style={{border: 'none'}}>
               <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
                 <Typography
                   sx={{
                     fontSize: {
-                      md: 35,
-                      sm: 25,
-                      xs: 12
+                      md: 40,
+                      sm: 30,
+                      xs: 20
                     }
-                  }} gutterBottom variant='h4'>
+                  }} style={{ letterSpacing: '1px' }} gutterBottom variant='h4'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography sx={{
                   fontSize: {
-                    md: 25,
-                    sm: 20,
+                    md: 40,
+                    sm: 30,
                     xs: 15
                   }
                 }} gutterBottom variant='h5'>
@@ -145,18 +153,18 @@ export default function FAQPage() {
                 <Typography
                   sx={{
                     fontSize: {
-                      md: 35,
-                      sm: 25,
-                      xs: 12
+                      md: 40,
+                      sm: 30,
+                      xs: 20
                     }
-                  }} gutterBottom variant='h4'>
+                  }} style={{ letterSpacing: '1px' }} gutterBottom variant='h4'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography sx={{
                   fontSize: {
-                    md: 25,
-                    sm: 20,
+                    md: 40,
+                    sm: 30,
                     xs: 15
                   }
                 }} gutterBottom variant='h5'>
@@ -171,18 +179,18 @@ export default function FAQPage() {
                 <Typography
                   sx={{
                     fontSize: {
-                      md: 35,
-                      sm: 25,
-                      xs: 12
+                      md: 40,
+                      sm: 30,
+                      xs: 20
                     }
-                  }} gutterBottom variant='h4'>
+                  }} style={{ letterSpacing: '1px' }} gutterBottom variant='h4'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Typography sx={{
                   fontSize: {
-                    md: 25,
-                    sm: 20,
+                    md: 40,
+                    sm: 30,
                     xs: 15
                   }
                 }} gutterBottom variant='h5'>
@@ -193,11 +201,10 @@ export default function FAQPage() {
                 </Typography>
               </AccordionDetails>
             </Accordion>
-            
-                
+
+
           </div>
         </Box>
-
 
       </div>
     </ThemeProvider>

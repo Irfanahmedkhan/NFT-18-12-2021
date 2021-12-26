@@ -11,14 +11,11 @@
     align-items: center;
     
     height: max-content;
-    border: 2px solid hotpink;
 
 }
 .title_images {
     padding-top:20vw;
-    width: 80%;
-    
-    border: 1px solid red;
+    width: 80%;    
 }
 .boxImage {
     /* padding: 0 10%; */
@@ -26,5 +23,5 @@
 }
 
  .text {
-    margin-top: -8vw !important;
+    margin-top: -6vw !important;
 }

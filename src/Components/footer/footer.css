@@ -1,8 +1,6 @@
 .footerContainer {
     width: 100%;
     height: max-content;
-    position: relative;
-    top: 25vw;
 }
 
 .footerIcon {
@@ -19,7 +17,6 @@
 
 .footerIcon img {
     width: 7vw;
-    margin: 1vw;
     height: auto;
 }
 .footerText {

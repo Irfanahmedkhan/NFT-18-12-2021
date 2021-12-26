@@ -1,7 +1,6 @@
 .DAO_container {
     color: white;
     height: 100%;
-    border: 3px solid blue;
 }
 
 .DAO_bg_image {
@@ -13,6 +12,7 @@
     width: 100%;
     margin-bottom: -10vw;
     display: block;
+    
 }
 
 .bookImgDiv {

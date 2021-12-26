@@ -51,8 +51,8 @@ export default function FooterPage() {
 
                     <Typography sx={{
                         fontSize: {
-                            md: 25,
-                            sm: 20,
+                            md: 40,
+                            sm: 30,
                             xs: 15
                         }
                     }} gutterBottom variant='h3' className='footerText'>
