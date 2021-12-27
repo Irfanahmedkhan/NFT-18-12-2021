@@ -9,7 +9,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import './DAO.css'
 
 // import images from assets folder
-import DAO_bookHouse from '../../assets/DAO_bookHouse.png'
+import DAO_house_crop from '../../assets/DAO_house_crop.png'
 import DAO_bg from '../../assets/DAO_bg.png'
 import DAO_halfBook from '../../assets/DAO_halfBook.png'
 import DAO_bookEmpty from '../../assets/DAO_bookEmpty.png'
@@ -88,14 +88,15 @@ export default function DAOPage() {
             </Box>
             <Box sx={{ flexGrow: 1, display: {xs: 'none', sm: 'flex'} }}>
 
-            <img src={DAO_bookHouse} alt="book at token page"
+            <img src={DAO_house_crop} alt="house at token page"
                 style={{
                   width: "40%",
                   height: 'auto',
                   position:'absolute',
-                  left: '55%'
+                  left: '55%',
+                  top:'4%'
                 }} 
-                className="bookText"
+                className="bookHouse"
                />
 
             </Box>

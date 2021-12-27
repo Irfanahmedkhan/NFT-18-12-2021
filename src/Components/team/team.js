@@ -15,8 +15,8 @@ import 'swiper/css/pagination';
 import './team.css'
 
 // Import images from assests
-import character from './assets/character.png'
-import quantum_logo from './assets/quantum_logo.png'
+import character from '../../assets/character.png'
+import quantum_logo from '../../assets/quantum_logo.png'
 
 export default function TeamPage() {
 

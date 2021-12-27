@@ -11,6 +11,9 @@ body {
     padding: 10%;
 }
 
+.bookHouse{
+    border-radius: 2%;
+}
 .swiper {
     margin: 5% 0;
     width: 100%;
@@ -47,7 +50,7 @@ body {
 }
 
 .swiper-button-next {
-    background-image: url("./assets/next.png");
+    background-image: url("../../assets/next.png");
     width: 58px;
     height: 58px;
     background-repeat: no-repeat;
@@ -58,7 +61,7 @@ body {
     display: none;
 }
 .swiper-button-prev {
-    background-image: url("./assets/pre.png");
+    background-image: url("../../assets/pre.png");
     width: 58px;
     height: 58px;
     background-repeat: no-repeat;
@@ -89,6 +92,22 @@ body {
     .swiper-slide:nth-child(3n) {
         width: 100%;
     }
+
+
+}
+
+@media (max-width: 900px) {
+  
+
+    .teamsCard img{
+        width: 150px;
+        height: auto;
+
+    }
+}
+
+@media (max-width: 600px) {
+  
 
     .teamsCard img{
         width: 100px;

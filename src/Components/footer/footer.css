@@ -18,6 +18,7 @@
 .footerIcon img {
     width: 7vw;
     height: auto;
+    margin-left: 3vw ;
 }
 .footerText {
     letter-spacing: 2px;

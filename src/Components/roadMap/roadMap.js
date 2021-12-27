@@ -51,6 +51,7 @@ export default function RoadMapPage() {
 
 
           {/* only show on small screen view  */}
+
           <Box
             sx={{
               width: '80%',
@@ -73,8 +74,7 @@ export default function RoadMapPage() {
                 <img src={roadMap_Early2022} alt="Early2022"
                   style={{ position: 'relative', top: '2vw', width: '70%', }} />
                 <Typography variant='h6' sx={{
-                  fontSize: 10
-
+                  fontSize: 15
                 }}
                   style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
                 >
@@ -84,7 +84,7 @@ export default function RoadMapPage() {
                 <img src={roadMap_Late2022} alt="Early2022"
                   style={{ position: 'relative', top: '2vw', width: '70%', }} />
                 <Typography variant='h6' sx={{
-                  fontSize: 10
+                  fontSize: 15
 
                 }}
                   style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
@@ -103,10 +103,10 @@ export default function RoadMapPage() {
             }}
             >
               <Box >
-                <img src={roadMap_Early2022} alt="Early2022"
+                <img src={roadMap_Early2022} alt="Jan 2022"
                   style={{ position: 'relative', top: '2vw', width: '70%', }} />
                 <Typography variant='h6' sx={{
-                  fontSize: 10
+                  fontSize: 15
 
                 }}
                   style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
@@ -119,7 +119,7 @@ export default function RoadMapPage() {
                 <img src={roadMap_Mid2022} alt="Early2022"
                   style={{ position: 'relative', top: '2vw', width: '70%', }} />
                 <Typography variant='h6' sx={{
-                  fontSize: 10
+                  fontSize: 15
 
                 }}
                   style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
@@ -132,51 +132,48 @@ export default function RoadMapPage() {
           <Box sx={{ width: { xs: '80%' }, display: { xs: 'flex', sm: 'none' } }}>
             <img src={roadMap_path} alt="path" style={{ width: '100%', height: '100%' }} />
           </Box>
+
           {/* ======================== */}
 
 
           {/* show on big screen */}
           <Box sx={{
-          flexGrow: 1, display: { xs: 'none', sm: 'flex' }, 
-          width: '80%', flexDirection: 'row', 
-          justifyContent: { xs: 'center', md: 'center' }, alignItems: 'center'
+            flexGrow: 1, display: { xs: 'none', sm: 'flex' },
+            width: '80%', flexDirection: 'row',
+            justifyContent: { xs: 'center', md: 'center' }, alignItems: 'center'
           }}
-
+            style={{ marginTop: "5vw" }}
           >
-            <Box sx={{ width: '30%', height: '60vw' }}
+            <Box sx={{ width: 'auto', height: 'auto' }}
               style={{
                 display: 'flex', flexDirection: 'column',
                 justifyContent: 'space-evenly',
+
               }}
             >
-              <Box style={{ minWidth: '100px' }} sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, flexDirection: 'column' }}>
+              <Box className="box">
                 <img src={roadMap_Early2022} alt="Early2022"
-                  style={{ width: '100%', marginTop: '10vw' }} />
+                />
                 <Typography variant='h6' sx={{
                   fontSize: {
-                    md: 25,
-                    sm: 20,
-                    xs: 15,
+                    md: 20,
+                    sm: 15,
                   },
-
-                }}
-                  style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
+                }} style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
                 >
                   Token funding, Token listing, Game development, Castles A collaborative approach to land acquisition.
                 </Typography>
               </Box>
-              <Box style={{ minWidth: '100px' }} sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, flexDirection: 'column' }}>
+
+              <Box style={{ marginTop: '15vw' }} className="box">
                 <img src={roadMap_Late2022} alt="Early2022"
-                  style={{ width: '100%', }} />
+                />
                 <Typography variant='h6' sx={{
                   fontSize: {
-                    md: 25,
-                    sm: 20,
-                    xs: 15,
+                    md: 20,
+                    sm: 15,
                   },
-
-                }}
-                  style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
+                }} style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
                 >
                   Token funding, Token listing, Game development, Castles A collaborative approach to land acquisition.
                 </Typography>
@@ -184,62 +181,53 @@ export default function RoadMapPage() {
             </Box>
 
             <Box sx={{
-              width: '40%', height: '60vw',
+              width: '40%', height: '40vw',
               display: { xs: 'none', sm: 'flex' }, justifyContent: 'center'
             }}>
               <img src={roadMap_path} alt="path" style={{ width: '100%', height: '100%' }} />
             </Box>
 
-
-
-            <Box sx={{ width: '30%', height: '60vw' }}
+            <Box sx={{ width: 'auto', height: 'auto' }}
               style={{
                 display: 'flex', flexDirection: 'column',
-                justifyContent: 'space-evenly', marginTop: '10vw'
+                justifyContent: 'space-evenly',
+
               }}
-
             >
-              <Box style={{ minWidth: '100px' }} sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, flexDirection: 'column' }}>
-                <img src={roadMap_Early2022} alt="Early2022"
-                  style={{ width: '100%', }} />
+              <Box style={{ marginLeft: '-5vw' }} className="box">
+                <img src={roadMap_Late2022} alt="Early2022"
+                />
                 <Typography variant='h6' sx={{
                   fontSize: {
-                    md: 25,
-                    sm: 20,
-                    xs: 15,
+                    md: 20,
+                    sm: 15,
                   },
-
-                }}
-                  style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
+                }} style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
                 >
                   Token funding, Token listing, Game development, Castles A collaborative approach to land acquisition.
                 </Typography>
               </Box>
-              <Box style={{ minWidth: '100px' }} sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' }, flexDirection: 'column' }}>
+
+              <Box style={{ marginTop: '15vw' }} className="box">
                 <img src={roadMap_Mid2022} alt="Early2022"
-                  style={{ width: '100%', }} />
+                />
                 <Typography variant='h6' sx={{
                   fontSize: {
-                    md: 25,
-                    sm: 20,
-                    xs: 15,
+                    md: 20,
+                    sm: 15,
                   },
-
-                }}
-                  style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
+                }} style={{ padding: '5px', color: '#3c3025', border: '2px solid #3c3025', backgroundColor: '#F4CCA1' }}
                 >
                   Token funding, Token listing, Game development, Castles A collaborative approach to land acquisition.
                 </Typography>
               </Box>
-
             </Box>
-
 
 
           </Box>
 
 
-          <Box sx={{width:'80%'}}>
+          <Box style={{ marginTop: "5vw", width: '80%' }}>
             <Typography sx={{
               fontSize: {
                 md: 35,

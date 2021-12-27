@@ -2,7 +2,19 @@
     background-image: url("../../assets/roadMap_bg.png");
     background-color: transparent;
     background-repeat: no-repeat;
-    background-size: contain;    
+    background-size: contain;
     width: 100%;
     height: max-content;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    max-width: 300px;
+}
+.box img {
+    width: 80%;
 }
