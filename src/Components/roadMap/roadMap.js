@@ -13,7 +13,8 @@ import './roadMap.css'
 import roadMap_Early2022 from '../../assets/roadMap_Early2022.png'
 import roadMap_Late2022 from '../../assets/roadMap_Late2022.png'
 import roadMap_Mid2022 from '../../assets/roadMap_Mid2022.png'
-import svg from '../../assets/svg.svg'
+import path from '../../assets/path.png'
+// import svg from '../../assets/svg.svg'
 
 export default function RoadMapPage() {
 
@@ -130,7 +131,7 @@ export default function RoadMapPage() {
             </Box>
           </Box>
           <Box sx={{ width: { xs: '80%' }, display: { xs: 'flex', sm: 'none' } }}>
-            <img src={svg} alt="path" style={{ width: '100%', height: '100%' }} />
+            <img src={path} alt="path" style={{ width: '100%', height: '100%' }} />
           </Box>
 
           {/* ======================== */}
@@ -185,7 +186,7 @@ export default function RoadMapPage() {
               width: '40%', height: '40vw',
               display: { xs: 'none', sm: 'flex' }, justifyContent: 'center'
             }}>
-              <img src={svg} alt="path" style={{ width: '100%', height: '100%' }} />
+              <img src={path} alt="path" style={{ width: '100%', height: '100%' }} />
             </Box>
 
             <Box sx={{ width: 'auto', height: 'auto' }}
